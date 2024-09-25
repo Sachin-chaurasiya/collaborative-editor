@@ -1,19 +1,11 @@
 "use client";
 
+import { useRoomId } from "@/hooks/useRoomId";
 import { LiveblocksProvider } from "@liveblocks/react";
-import { useSearchParams } from "next/navigation";
-import { useEffect, useState, type PropsWithChildren } from "react";
+import { type PropsWithChildren } from "react";
 
 export function Providers({ children }: PropsWithChildren) {
-  const searchParams = useSearchParams();
-
-  const [roomId, setRoomId] = useState<string | null>(
-    searchParams.get("roomId")
-  );
-
-  useEffect(() => {
-    setRoomId(searchParams.get("roomId"));
-  }, [searchParams]);
+  const roomId = useRoomId();
 
   return (
     <LiveblocksProvider
