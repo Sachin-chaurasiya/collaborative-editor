@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode } from "react";
 import { RoomProvider } from "@liveblocks/react/suspense";
 import { ClientSideSuspense } from "@liveblocks/react";
 import ErrorListener from "@/components/ErrorListener";
