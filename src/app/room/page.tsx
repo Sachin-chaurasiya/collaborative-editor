@@ -1,13 +1,13 @@
 "use client";
 
 import { Room } from "@/app/Room";
-import { CollaborativeEditor } from "@/components/CollaborativeEditor";
+import { Editor } from "@/components/Editor";
 
-export default function Home() {
+export default function RoomPage() {
   return (
     <main>
       <Room>
-        <CollaborativeEditor />
+        <Editor />
       </Room>
     </main>
   );

@@ -13,7 +13,8 @@ const ErrorListener = () => {
   useErrorListener((error) => {
     switch (error.code) {
       case -1:
-        // Authentication error
+        setError("Could not connect to Liveblocks");
+
         break;
 
       case 4001:
@@ -22,16 +23,9 @@ const ErrorListener = () => {
 
         break;
 
-      case 4005:
-        // Could not connect because room was full
-        break;
-
-      case 4006:
-        // The room ID has changed, get the new room ID (use this for redirecting)
-        break;
-
       default:
-        // Unexpected error
+        setError("An unexpected error occurred");
+
         break;
     }
   });
